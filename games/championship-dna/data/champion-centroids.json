@@ -1,0 +1,65 @@
+{
+  "era1": {
+    "years": "1996\u20132004",
+    "label": "Physical, star-driven, defensive identity",
+    "n_rosters": 10,
+    "star_share": 0.2,
+    "pg_share": 0.343,
+    "sg_share": 0.129,
+    "sf_share": 0.243,
+    "pf_share": 0.129,
+    "c_share": 0.157,
+    "top_archetypes": [
+      "PG_07",
+      "SF_04",
+      "PG_04",
+      "SF_03",
+      "PG_03",
+      "SG_10",
+      "SF_01",
+      "C_08"
+    ]
+  },
+  "era2": {
+    "years": "2005\u20132015",
+    "label": "System basketball, veteran depth, two-way play",
+    "n_rosters": 11,
+    "star_share": 0.247,
+    "pg_share": 0.416,
+    "sg_share": 0.065,
+    "sf_share": 0.299,
+    "pf_share": 0.091,
+    "c_share": 0.13,
+    "top_archetypes": [
+      "PG_07",
+      "SF_04",
+      "PG_09",
+      "C_08",
+      "PG_06",
+      "C_07",
+      "PG_03",
+      "PG_02"
+    ]
+  },
+  "era3": {
+    "years": "2016\u20132026",
+    "label": "Pace-and-space, positionless, versatile defenders",
+    "n_rosters": 9,
+    "star_share": 0.397,
+    "pg_share": 0.444,
+    "sg_share": 0.143,
+    "sf_share": 0.302,
+    "pf_share": 0.063,
+    "c_share": 0.048,
+    "top_archetypes": [
+      "PG_08",
+      "PG_01",
+      "SF_09",
+      "PG_02",
+      "PG_04",
+      "PG_07",
+      "SG_10",
+      "SG_05"
+    ]
+  }
+}

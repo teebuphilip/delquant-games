@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DelQuant NBA Games — Powered by 25 Years of Basketball Intelligence</title>
+  <meta name="description" content="Free NBA games powered by DelQuant — 25 years of basketball projections and championship data.">
+  <meta property="og:title" content="DelQuant NBA Games">
+  <meta property="og:description" content="Free NBA games powered by 25 years of basketball intelligence.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --border: #374151;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --gold: #f59e0b;
+      --gold-light: #fcd34d;
+      --radius: 12px;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 16px 64px; }
+
+    .header {
+      text-align: center;
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: clamp(28px, 6vw, 48px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 60%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .header p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .sloan-badge {
+      display: inline-block;
+      background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.3);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+
+    .game-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .game-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .game-icon { font-size: 32px; }
+    .game-name {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .game-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .game-play {
+      display: inline-block;
+      margin-top: 4px;
+      background: var(--gold);
+      color: #000;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 8px;
+      align-self: flex-start;
+    }
+    .game-card:hover .game-play { background: var(--gold-light); }
+
+    .coming-soon {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+    .coming-soon .game-play {
+      background: var(--border);
+      color: var(--muted);
+    }
+    .badge-new {
+      display: inline-block;
+      background: rgba(74,222,128,0.15);
+      border: 1px solid rgba(74,222,128,0.4);
+      color: #4ade80;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0 0;
+      border-top: 1px solid var(--border);
+      margin-top: 56px;
+    }
+    .footer p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .footer a { color: var(--gold); text-decoration: none; font-weight: 700; }
+
+    @media (max-width: 480px) {
+      .games-grid { grid-template-columns: 1fr; }
+      .header { padding: 36px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1>DelQuant NBA Games</h1>
+      <p>Free NBA games powered by 25 years of basketball intelligence.
+         The same engine used by analysts, DFS players, and sports media.</p>
+      <span class="sloan-badge">MIT Sloan SSAC 2027 · delquant.com</span>
+    </header>
+
+    <div class="games-grid">
+
+      <a href="games/championship-dna/" class="game-card">
+        <span class="game-icon">🏆</span>
+        <span class="game-name">Championship DNA <span class="badge-new">New</span></span>
+        <p class="game-desc">Pick up to 8 NBA players from any era — under a $100M cap. The model scores your roster against 30 years of championship teams and finds your closest historical comp.</p>
+        <span class="game-play">Play Now →</span>
+      </a>
+
+      <div class="game-card coming-soon">
+        <span class="game-icon">🎯</span>
+        <span class="game-name">Beat The Model</span>
+        <p class="game-desc">Pick tonight's top scorer. DelQuant picks its own. After the game, see who got it right. Can you beat 25 years of basketball intelligence?</p>
+        <span class="game-play">Coming Soon</span>
+      </div>
+
+      <div class="game-card coming-soon">
+        <span class="game-icon">📊</span>
+        <span class="game-name">Season Predictor</span>
+        <p class="game-desc">Predict any player's season averages before tip-off. DelQuant's projections revealed alongside yours. Check back in April.</p>
+        <span class="game-play">Coming Soon</span>
+      </div>
+
+      <div class="game-card coming-soon">
+        <span class="game-icon">🔄</span>
+        <span class="game-name">Trade Analyzer</span>
+        <p class="game-desc">Pick two players. DelQuant tells you who wins the trade based on 25 years of projection data. No opinion — just the model.</p>
+        <span class="game-play">Coming Soon</span>
+      </div>
+
+      <div class="game-card coming-soon">
+        <span class="game-icon">🧬</span>
+        <span class="game-name">Which Player Are You?</span>
+        <p class="game-desc">Answer 6 questions about your play style. Get matched to an NBA player archetype powered by DelQuant's statistical DNA clusters.</p>
+        <span class="game-play">Coming Soon</span>
+      </div>
+
+      <div class="game-card coming-soon">
+        <span class="game-icon">📈</span>
+        <span class="game-name">The Edge Finder</span>
+        <p class="game-desc">See tonight's props against DelQuant projections. Find where the model disagrees with the market. No real money — pure signal.</p>
+        <span class="game-play">Coming Soon</span>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>
+        Powered by <a href="https://delquant.com" target="_blank">DelQuant</a> from R&amp;B AlgoLabs.<br>
+        25 years of NBA basketball intelligence. Methodology submitted to MIT Sloan Sports Analytics Conference 2027.
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>

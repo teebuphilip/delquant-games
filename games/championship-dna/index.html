@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Championship DNA — Does Your Roster Have What It Takes?</title>
+  <meta name="description" content="Pick any 8 NBA players from any era. The same model submitted to MIT Sloan Sports Analytics Conference 2027 scores your roster against 30 years of NBA champions.">
+  <meta property="og:title" content="Championship DNA — Does Your Roster Have What It Takes?">
+  <meta property="og:description" content="Pick any 8 NBA players from any era. Powered by DelQuant — 25 years of NBA intelligence.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Championship DNA">
+  <meta name="twitter:description" content="Does your NBA roster have championship DNA? Find out with 25 years of data.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <span class="trophy">🏆</span>
+      <h1>Championship DNA</h1>
+      <p class="subtitle">
+        Pick up to 8 NBA players from any era. We score your roster against
+        30 years of championship teams using the same model submitted to
+        MIT Sloan Sports Analytics Conference 2027.
+      </p>
+      <span class="sloan-badge">MIT Sloan SSAC 2027 · 75.8% Conference Finals AUC</span>
+    </header>
+
+    <div class="section">
+      <p class="section-title">Build Your Roster (5–8 players)</p>
+      <div id="search-wrapper">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search any NBA player, any era..."
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+        >
+        <div id="search-results"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div id="roster-slots"></div>
+      <p class="roster-count" id="roster-count">0/8 players</p>
+    </div>
+
+    <div class="cap-meter-section">
+      <div class="cap-meter-header">
+        <span class="section-title" style="margin:0">Salary Cap — $100M</span>
+        <span id="cap-used" class="cap-used">$0M</span>
+      </div>
+      <div class="cap-meter-track">
+        <div id="cap-meter-fill" class="cap-meter-fill"></div>
+      </div>
+      <div class="cap-meter-footer">
+        <span id="cap-status">Add at least 5 players</span>
+        <span id="cap-remaining">$100M remaining</span>
+      </div>
+    </div>
+
+    <button id="analyze-btn" class="hidden">Analyze Championship DNA →</button>
+
+    <div id="result-panel" class="hidden">
+
+      <div id="loading">
+        <div class="loading-spinner"></div>
+        <p id="loading-step">Assigning archetypes...</p>
+      </div>
+
+      <div id="result-content" class="hidden">
+        <div class="result-header">
+          <h2>Championship DNA Score</h2>
+          <span id="score-number"></span>
+          <span id="score-bar"></span>
+        </div>
+
+        <div class="result-body">
+
+          <div class="score-row">
+            <span class="score-label">Offense</span>
+            <span class="mini-bar" id="off-bar"></span>
+            <span class="score-value" id="off-score"></span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">Defense</span>
+            <span class="mini-bar" id="def-bar"></span>
+            <span class="score-value" id="def-score"></span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">Balance</span>
+            <span class="mini-bar" id="bal-bar"></span>
+            <span class="score-value" id="bal-score"></span>
+          </div>
+
+          <p id="result-salary" class="result-salary"></p>
+          <hr class="divider">
+
+          <div class="comp-section">
+            <h3>Closest Historical Comp</h3>
+            <p id="comp-name"></p>
+            <p id="comp-desc"></p>
+            <p id="comp-players"></p>
+            <p id="era-label"></p>
+          </div>
+
+          <div class="arch-section">
+            <h3>Your Archetype Mix</h3>
+            <div id="archetype-mix"></div>
+          </div>
+
+          <div class="share-buttons">
+            <button class="share-btn" id="share-btn">Copy Result Card</button>
+            <button class="share-btn" id="share-url-btn">Share This Roster</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer-brand">
+        Powered by <a href="https://delquant.com" target="_blank">DelQuant</a> —
+        25 years of NBA basketball intelligence from R&amp;B AlgoLabs
+      </p>
+      <p class="footer-sloan">
+        The Championship DNA model identifies championship-shaped NBA rosters
+        with 75.8% accuracy across 921 team-seasons (1996–2026).
+        Methodology submitted to MIT Sloan Sports Analytics Conference 2027.
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
