@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which NBA Player Are You? — Powered by DelQuant</title>
+  <meta name="description" content="Answer 6 questions about your play style. Get matched to an NBA player archetype powered by DelQuant's statistical DNA clusters.">
+  <meta property="og:title" content="Which NBA Player Are You?">
+  <meta property="og:description" content="6 questions. Your NBA player DNA. Powered by 25 years of basketball data.">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <a href="../../" class="back-link">← All Games</a>
+      <span class="icon">🧬</span>
+      <h1>Which Player Are You?</h1>
+      <p class="subtitle">6 questions. Your NBA player DNA. No guesswork — just the data.</p>
+      <span class="sloan-badge">Powered by DelQuant · 25 years of NBA archetypes</span>
+    </header>
+
+    <div id="intro">
+      <p class="intro-body">
+        DelQuant has classified 1,354 NBA players across 53 statistical archetypes using 25 years of game data.
+        Answer 6 questions about how you play, and the model will match your style to the archetype you belong in — and name your closest NBA comp.
+      </p>
+      <button class="start-btn" id="start-btn">Find My Player Type →</button>
+    </div>
+
+    <div id="quiz-area" class="hidden">
+      <div class="progress-bar">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-label" id="progress-label">Question 1 of 6</p>
+      </div>
+      <div id="question-container"></div>
+    </div>
+
+    <div id="result-panel" class="hidden">
+
+      <div class="result-header">
+        <p class="result-pre">Your DelQuant Archetype</p>
+        <p class="result-label" id="result-label"></p>
+        <p class="result-archetype" id="result-archetype"></p>
+      </div>
+
+      <div class="result-body">
+        <p class="result-description" id="result-description"></p>
+        <div class="result-traits" id="result-traits"></div>
+
+        <div class="comp-card">
+          <p class="comp-pre">Your Closest NBA Comp</p>
+          <p class="comp-name" id="comp-name"></p>
+          <p class="comp-note" id="comp-note"></p>
+          <p class="comp-stat" id="comp-stat"></p>
+          <p class="dq-label" id="dq-label"></p>
+        </div>
+      </div>
+
+      <div class="result-buttons">
+        <button class="share-btn" id="share-btn">Copy My Result</button>
+        <button class="retry-btn" id="retry-btn">Try Again</button>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>Powered by <a href="https://delquant.com" target="_blank">DelQuant</a> — R&amp;B AlgoLabs</p>
+      <p class="footer-sub">Archetype clusters derived from 25 years of NBA game logs. No real money involved.</p>
+    </footer>
+
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
