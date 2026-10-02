@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Analyzer — Powered by DelQuant</title>
+  <meta name="description" content="Pick two NBA players. DelQuant's 25-year projection model tells you who wins the trade.">
+  <meta property="og:title" content="DelQuant Trade Analyzer">
+  <meta property="og:description" content="Who wins your NBA trade? Let 25 years of basketball data decide.">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <a href="../../" class="back-link">← All Games</a>
+      <span class="icon">🔄</span>
+      <h1>Trade Analyzer</h1>
+      <p class="subtitle">Pick two NBA players. DelQuant's projection model tells you who wins the trade.</p>
+      <span class="sloan-badge">Powered by DelQuant · 25 years of NBA data</span>
+    </header>
+
+    <div class="trade-board">
+
+      <div class="trade-side" id="side-a">
+        <div class="side-label">You Give</div>
+        <div id="search-wrapper-a" class="search-wrapper">
+          <input id="search-a" type="text" placeholder="Search player..." autocomplete="off" spellcheck="false">
+          <div id="results-a" class="search-results"></div>
+        </div>
+        <div id="player-card-a" class="player-card empty">
+          <span class="empty-label">No player selected</span>
+        </div>
+      </div>
+
+      <div class="vs-divider">
+        <span class="vs-text">FOR</span>
+      </div>
+
+      <div class="trade-side" id="side-b">
+        <div class="side-label">You Get</div>
+        <div id="search-wrapper-b" class="search-wrapper">
+          <input id="search-b" type="text" placeholder="Search player..." autocomplete="off" spellcheck="false">
+          <div id="results-b" class="search-results"></div>
+        </div>
+        <div id="player-card-b" class="player-card empty">
+          <span class="empty-label">No player selected</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="analyze-btn" class="analyze-btn hidden">Analyze This Trade →</button>
+
+    <div id="result-panel" class="hidden">
+
+      <div id="loading">
+        <div class="loading-spinner"></div>
+        <p id="loading-step">Running projection model...</p>
+      </div>
+
+      <div id="result-content" class="hidden">
+        <div class="verdict-header">
+          <p class="verdict-label">DelQuant Verdict</p>
+          <p id="verdict-text" class="verdict-text"></p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comp-col">
+            <p id="result-name-a" class="comp-name"></p>
+            <div id="stat-bars-a" class="stat-bars"></div>
+            <p id="comp-value-a" class="comp-value"></p>
+          </div>
+          <div class="comp-divider"></div>
+          <div class="comp-col">
+            <p id="result-name-b" class="comp-name"></p>
+            <div id="stat-bars-b" class="stat-bars"></div>
+            <p id="comp-value-b" class="comp-value"></p>
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <p class="breakdown-title">Why DelQuant Says This</p>
+          <p id="breakdown-text" class="breakdown-text"></p>
+        </div>
+
+        <div class="share-buttons">
+          <button class="share-btn" id="share-btn">Copy Result Card</button>
+          <button class="share-btn secondary" id="new-trade-btn">Try Another Trade</button>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>Powered by <a href="https://delquant.com" target="_blank">DelQuant</a> — R&amp;B AlgoLabs</p>
+      <p class="footer-sub">Projections based on 25 years of NBA game logs. No real money involved.</p>
+    </footer>
+
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
